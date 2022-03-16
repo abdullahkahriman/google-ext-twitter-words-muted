@@ -1,0 +1,15 @@
+#tw-export,
+#tw-import {
+  background: transparent;
+  border: 0;
+  font-size: 1.5em;
+  padding: 0;
+  cursor: pointer;
+}
+
+#tw-section {
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+}
