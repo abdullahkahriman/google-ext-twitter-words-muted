@@ -7,24 +7,26 @@ function addElement(selector, html) {
 }
 
 async function init() {
-  await sleep();
-  const section = document
-    .querySelector("section:nth-child(2)")
-    .firstChild.querySelector("div:nth-child(3)");
+  try {
+    await sleep();
+    const section = document
+      .querySelector("section:nth-child(2)")
+      .firstChild.querySelector("div:nth-child(3)");
 
-  section.id=("tw-section");
+    section.id = "tw-section";
 
-  addElement(
-    section,
-    `
+    addElement(
+      section,
+      `
         <div>
           <button type="button" title="Export" id="tw-export">⬇️</button>
           <button type="button" title="Import" id="tw-import">⬆️</button>
         </div`
-  );
+    );
 
-  document.getElementById("tw-export").addEventListener("click", exports);
-  document.getElementById("tw-import").addEventListener("click", imports);
+    document.getElementById("tw-export").addEventListener("click", exports);
+    document.getElementById("tw-import").addEventListener("click", imports);
+  } catch {}
 }
 init();
 
